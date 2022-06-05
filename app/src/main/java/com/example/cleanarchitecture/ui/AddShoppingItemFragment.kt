@@ -20,9 +20,9 @@ class AddShoppingItemFragment : Fragment(R.layout.fragment_add_shopping_item) {
         viewModel = ViewModelProvider(requireActivity()).get(ShoppingViewModel::class.java)
 
         ivShoppingImage.setOnClickListener {
-//            findNavController().navigate(
-//
-//            )
+            findNavController().navigate(
+                AddShoppingItemFragmentDirections.actionAddShoppingItemFragmentToImagePickFragment()
+            )
         }
 
         val callback = object : OnBackPressedCallback(true) {
